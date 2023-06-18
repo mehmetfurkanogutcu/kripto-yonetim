@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: frontendreactwebapp
+  name: criptoyonetim
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: frontendreactwebapp
+      app: criptoyonetim
   template:
     metadata:
       labels:
-        app: frontendreactwebapp
+        app: criptoyonetim
     spec:
       containers:
-      - name: frontendreactwebapp
-        image: coinoacr.azurecr.io/frontendreactwebapp:v1
+      - name: criptoyonetim
+        image: finanssehiracr.azurecr.io/criptoyonetim:v1
         resources:
           requests:
             cpu: 50m
@@ -26,5 +26,4 @@ spec:
         - name: coino-registry
 
 
-  annotations:
-    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
+ 
