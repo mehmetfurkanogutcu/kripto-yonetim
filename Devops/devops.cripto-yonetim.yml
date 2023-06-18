@@ -14,16 +14,15 @@ spec:
     spec:
       containers:
       - name: criptoyonetim
-        image: finanssehiracr.azurecr.io/criptoyonetim:v1
+        image: coinqoacr.azurecr.io/coinqolanding:v1
         resources:
           requests:
-            cpu: 500m
-            memory: 600Mi
+            cpu: 200m
+            memory: 250Mi
           limits:
-            cpu: 700m
-            memory: 800Mi
+            cpu: 500m
+            memory: 500Mi
       imagePullSecrets:
-        - name: finans-registry
-
+        - name: coinqo-registy
 
  
