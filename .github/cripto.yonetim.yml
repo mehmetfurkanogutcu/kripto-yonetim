@@ -1,4 +1,4 @@
-name: DEV COINO FRONTEND - build and deploy
+name: DEV Cripto-Yonetim FRONTEND - build and deploy
 
 on: workflow_dispatch
 
