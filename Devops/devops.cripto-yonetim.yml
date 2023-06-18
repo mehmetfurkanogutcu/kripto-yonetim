@@ -17,11 +17,11 @@ spec:
         image: finanssehiracr.azurecr.io/criptoyonetim:v1
         resources:
           requests:
-            cpu: 50m
-            memory: 100Mi
+            cpu: 500m
+            memory: 600Mi
           limits:
-            cpu: 100m
-            memory: 200Mi
+            cpu: 700m
+            memory: 800Mi
       imagePullSecrets:
         - name: finans-registry
 
