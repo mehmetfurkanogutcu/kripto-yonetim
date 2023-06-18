@@ -1,0 +1,85 @@
+[
+    {
+      "title": "User Management",
+      "path": "/user-management",
+      "childrens": [
+        {
+          "title": "User Groups",
+          "childrens": [
+            {
+              "title": "Add User Group",
+              "path": "/user-management/add-user-group"
+            }
+          ]
+        },
+        {
+          "title": "Users",
+          "childrens": [
+            {
+              "title": "Add Users",
+              "path": "/users-management/add-users"
+            },
+            {
+              "title": "Add Users via Excel",
+              "path": "/users-management/add-users-via-excel"
+            },
+            {
+              "title": "Download Excel Template",
+              "path": "/users-management/download-excel-template"
+            }
+          ]
+        },
+        {
+          "title": "User Roles",
+          "childrens": [
+            {
+              "title": "Add User Roles",
+              "path": "/user-management/add-user-roles"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Business Controls",
+      "childrens": [
+        {
+          "title": "Segregation of Duties",
+          "path": "/"
+        },
+        {
+          "title": "Automated Process Controls",
+          "path": "/"
+        },
+        {
+          "title": "Differences Between Events",
+          "path": "/"
+        },
+        {
+          "title": "Consecutive Events",
+          "path": "/"
+        },
+        {
+          "title": "Add New Control",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "title": "Action List",
+      "childrens": [
+        {
+          "title": "Create New Email Template",
+          "path": "/"
+        }
+      ]
+    },
+    {
+      "title": "Reports",
+      "path": "/reports"
+    },
+    {
+      "title": "Dashboards",
+      "path": "/"
+    }
+  ]
