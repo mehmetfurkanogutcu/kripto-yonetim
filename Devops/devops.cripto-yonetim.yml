@@ -23,7 +23,7 @@ spec:
             cpu: 100m
             memory: 200Mi
       imagePullSecrets:
-        - name: coino-registry
+        - name: finanssehir-registry
 
 
  
