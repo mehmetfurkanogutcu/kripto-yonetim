@@ -3,10 +3,10 @@ name: Cripto-Yonetim FRONTEND - build and deploy
 on: workflow_dispatch
 
 env:
-  AZURE_CONTAINER_REGISTRY: "finanssehiracr"
+  AZURE_CONTAINER_REGISTRY: "coinqoacr"
   CONTAINER_NAME: "criptoyonetim"
-  RESOURCE_GROUP: "MFO-rg"
-  CLUSTER_NAME: "finanssehir"
+  RESOURCE_GROUP: "coinqo-k8s"
+  CLUSTER_NAME: "coinqo-k8s"
   DEPLOYMENT_MANIFEST_PATH: "Devops/devops.cripto-yonetim.yml"
 
 jobs:
