@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontendreactwebapp
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: frontendreactwebapp
+  template:
+    metadata:
+      labels:
+        app: frontendreactwebapp
+    spec:
+      containers:
+      - name: frontendreactwebapp
+        image: coinoacr.azurecr.io/frontendreactwebapp:v1
+        resources:
+          requests:
+            cpu: 50m
+            memory: 100Mi
+          limits:
+            cpu: 100m
+            memory: 200Mi
+      imagePullSecrets:
+        - name: coino-registry
+
+
+  annotations:
+    service.beta.kubernetes.io/azure-load-balancer-internal: "true"
