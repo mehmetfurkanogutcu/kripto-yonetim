@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: criptoyonetim
-        image: kriptoyonetimacr.azurecr.io/coinqolanding:v1
+        image: kriptoyonetimacr.azurecr.io/criptoyonetim:v1
         resources:
           requests:
             cpu: 200m
