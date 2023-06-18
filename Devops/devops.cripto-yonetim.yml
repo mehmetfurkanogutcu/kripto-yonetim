@@ -23,6 +23,6 @@ spec:
             cpu: 500m
             memory: 500Mi
       imagePullSecrets:
-        - name: coinqo-registy
+        - name: kripto-registry
 
  
