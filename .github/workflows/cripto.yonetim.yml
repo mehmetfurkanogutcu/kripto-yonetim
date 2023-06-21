@@ -4,7 +4,7 @@ on: workflow_dispatch
 
 env:
   AZURE_CONTAINER_REGISTRY: "criptoacr"
-  CONTAINER_NAME: "criptoyonetim"
+  CONTAINER_NAME: "criptoyonetimreact"
   RESOURCE_GROUP: "NetworkWatcherRG"
   CLUSTER_NAME: "criptoyonetim"
   DEPLOYMENT_MANIFEST_PATH: "Devops/devops.cripto-yonetim.yml"
