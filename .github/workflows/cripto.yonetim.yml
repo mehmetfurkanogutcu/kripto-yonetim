@@ -3,7 +3,7 @@ name: PROD CRIPTO YONETIM - build and deploy
 on: workflow_dispatch
 
 env:
-  AZURE_CONTAINER_REGISTRY: "coinoacrprod"
+  AZURE_CONTAINER_REGISTRY: "criptoacr"
   CONTAINER_NAME: "kriptoyonetim"
   RESOURCE_GROUP: "NetworkWatcherRG"
   CLUSTER_NAME: "criptoyonetim"
