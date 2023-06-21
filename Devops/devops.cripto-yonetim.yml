@@ -17,12 +17,12 @@ spec:
         image: kriptoyonetimacr.azurecr.io/criptoyonetim:v1
         resources:
           requests:
-            cpu: 200m
-            memory: 250Mi
+            cpu: 1024m
+            memory: 2048Mi
           limits:
-            cpu: 500m
-            memory: 500Mi
+            cpu: 2048m
+            memory: 4096Mi
       imagePullSecrets:
-        - name: kripto-registry
+        - name: cripto-registry
 
  
