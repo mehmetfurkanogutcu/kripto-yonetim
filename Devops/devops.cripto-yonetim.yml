@@ -13,7 +13,7 @@ spec:
         app: criptoyonetimreact
     spec:
       containers:
-      - name: criptoyonetim
+      - name: criptoyonetimreact
         image: criptoacr.azurecr.io/criptoyonetimreact:v1
         resources:
           requests:
@@ -23,6 +23,6 @@ spec:
             cpu: 2048m
             memory: 4096Mi
       imagePullSecrets:
-        - name: cripto-registry
+        - name: mfo
 
  
