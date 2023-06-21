@@ -3,10 +3,10 @@ name: Cripto-Yonetim FRONTEND - build and deploy
 on: workflow_dispatch
 
 env:
-  AZURE_CONTAINER_REGISTRY: "kriptoyonetimacr"
+  AZURE_CONTAINER_REGISTRY: "criptoacr"
   CONTAINER_NAME: "criptoyonetim"
-  RESOURCE_GROUP: "rg-freemf"
-  CLUSTER_NAME: "finanssehir"
+  RESOURCE_GROUP: "NetworkWatcherRG"
+  CLUSTER_NAME: "criptoyonetim"
   DEPLOYMENT_MANIFEST_PATH: "Devops/devops.cripto-yonetim.yml"
 
 jobs:
