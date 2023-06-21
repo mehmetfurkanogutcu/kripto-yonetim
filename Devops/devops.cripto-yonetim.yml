@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: kriptoyonetim
-        image: criptoacr.azurecr.io/kriptoyonetim:v1
+        image: mfoacr.azurecr.io/kriptoyonetim:v1
         resources:
           requests:
             cpu: 1024m
@@ -23,6 +23,6 @@ spec:
             cpu: 2048m
             memory: 4096Mi
       imagePullSecrets:
-        - name: test
+        - name: mfo
 
  
