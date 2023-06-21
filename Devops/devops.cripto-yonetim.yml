@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: criptoyonetimreact
+  name: kriptoyonetim
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: criptoyonetimreact
+      app: kriptoyonetim
   template:
     metadata:
       labels:
-        app: criptoyonetimreact
+        app: kriptoyonetim
     spec:
       containers:
-      - name: criptoyonetimreact
-        image: criptoacr.azurecr.io/criptoyonetimreact:v1
+      - name: kriptoyonetim
+        image: criptoacr.azurecr.io/kriptoyonetim:v1
         resources:
           requests:
             cpu: 1024m
