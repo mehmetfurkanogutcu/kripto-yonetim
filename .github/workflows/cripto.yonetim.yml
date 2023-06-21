@@ -1,13 +1,13 @@
-name: Cripto-Yonetim FRONTEND - build and deploy
+name: PROD CRIPTO YONETIM - build and deploy
 
 on: workflow_dispatch
 
 env:
-  AZURE_CONTAINER_REGISTRY: "criptoacr"
-  CONTAINER_NAME: "criptoyonetimreact"
+  AZURE_CONTAINER_REGISTRY: "coinoacrprod"
+  CONTAINER_NAME: "kriptoyonetim"
   RESOURCE_GROUP: "NetworkWatcherRG"
   CLUSTER_NAME: "criptoyonetim"
-  DEPLOYMENT_MANIFEST_PATH: "Devops/devops.cripto-yonetim.yml"
+  DEPLOYMENT_MANIFEST_PATH: "devops/devops.cripto-yonetim.yml"
 
 jobs:
   buildImage:
