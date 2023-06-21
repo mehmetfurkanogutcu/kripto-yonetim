@@ -7,7 +7,7 @@ env:
   CONTAINER_NAME: "kriptoyonetim"
   RESOURCE_GROUP: "rg-freemf"
   CLUSTER_NAME: "mfo-test"
-  DEPLOYMENT_MANIFEST_PATH: "devops/devops.cripto-yonetim.yml"
+  DEPLOYMENT_MANIFEST_PATH: "Devops/devops.cripto-yonetim.yml"
 
 jobs:
   buildImage:
