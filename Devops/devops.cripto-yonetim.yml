@@ -23,6 +23,6 @@ spec:
             cpu: 2048m
             memory: 4096Mi
       imagePullSecrets:
-        - name: mfo
+        - name: test
 
  
