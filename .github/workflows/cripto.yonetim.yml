@@ -3,10 +3,10 @@ name: PROD CRIPTO YONETIM - build and deploy
 on: workflow_dispatch
 
 env:
-  AZURE_CONTAINER_REGISTRY: "criptoacr"
+  AZURE_CONTAINER_REGISTRY: "mfoacr"
   CONTAINER_NAME: "kriptoyonetim"
-  RESOURCE_GROUP: "NetworkWatcherRG"
-  CLUSTER_NAME: "criptoyonetim"
+  RESOURCE_GROUP: "rg-freemf"
+  CLUSTER_NAME: "mfo-test"
   DEPLOYMENT_MANIFEST_PATH: "devops/devops.cripto-yonetim.yml"
 
 jobs:
