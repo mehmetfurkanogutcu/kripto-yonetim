@@ -21,9 +21,7 @@ import LowVolumeCoins from "../LowVolumeCoins/LowVolumeCoins";
 import CryptoPrices from "../CryptoPrices/CryptoPrices";
 import MidVolumeCoins from "../MidVolumeCoins/MidVolumeCoins";
 import HighestBidCoins from "../HighestBidCoins/HighestBidCoins";
-import CryptoInfo from "../CryptoInfo/CryptoInfo";
-
-
+import { Link } from "react-router-dom";
 
 const Dashboard = () => {
   return (
@@ -34,9 +32,6 @@ const Dashboard = () => {
             <Sidebar />
           </Col>
           <Col md={11} xs={11}>
-            <Row>
-              <CryptoInfo/>
-            </Row>
             <Row className="dashboard-box-group">
               <Col md={6} sx={12}>
                 <Row>
@@ -44,55 +39,71 @@ const Dashboard = () => {
                     Kripto <mark>yönetim</mark> paneline hoşgeldiniz..
                   </p>
 
+
                   <Col xs={6} md={6}>
+                  <Link
+                  to={"coin-management/monthly-price-analysis-chart"}
+                  className="text-decoration-none"
+                >
                     <OverlayTrigger
                       placement="bottom"
                       overlay={
                         <Tooltip id="button-tooltip-2">
-                          Configure your database connections
+                          Aylık Fiyat Analiz Tablosu
                         </Tooltip>
                       }
                     >
                       <div className="dashboard-box p-3 shadow mb-3 bg-white rounded border-top-warning">
-                        <h5>Borsa Bağlantıları</h5>
+                        <h5>Aylık Fiyat Analiz Tablosu</h5>
                         <WifiTetheringIcon fontSize="large" color="info" />
                       </div>
                     </OverlayTrigger>
+                    </Link>
                   </Col>
 
                   <Col xs={6} md={6}>
+                  <Link
+                  to={"coin-management/coin-analysis"}
+                  className="text-decoration-none"
+                >
                     <OverlayTrigger
                       placement="bottom"
                       overlay={
                         <Tooltip id="button-tooltip-2">
-                          Control your Users
+                        Kripto Para Analizi
                         </Tooltip>
                       }
                     >
                       <div className="dashboard-box p-3 shadow mb-3 bg-white rounded border-top-primary">
-                        <h5>Kripto Paralar</h5>
+                        <h5>Kripto Para Analizi</h5>
                         <SupervisedUserCircleIcon
                           fontSize="large"
                           color="primary"
                         />
                       </div>
                     </OverlayTrigger>
+                    </Link>
                   </Col>
 
                   <Col xs={6} md={6}>
+                  <Link
+                  to={"coin-management/coin-tracker"}
+                  className="text-decoration-none"
+                >
                     <OverlayTrigger
                       placement="bottom"
                       overlay={
                         <Tooltip id="button-tooltip-2">
-                          Customize or Create Automated Business
+                         Anlık Kripto İzle
                         </Tooltip>
                       }
                     >
                       <div className="dashboard-box p-3 shadow mb-3 bg-white rounded border-top-danger">
-                        <h5>Portfolyöm</h5>
+                        <h5>Anlık Kripto İzle</h5>
                         <BusinessIcon fontSize="large" color="success" />
                       </div>
                     </OverlayTrigger>
+                    </Link>
                   </Col>
 
                   <Col xs={6} md={6}>

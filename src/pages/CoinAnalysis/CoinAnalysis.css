@@ -1,0 +1,129 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  }
+  
+  .styled-table thead tr {
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+  }
+  
+  .styled-table th,
+  .styled-table td {
+    padding: 12px 15px;
+  }
+  
+  .styled-table tbody tr {
+    border-bottom: thin solid #dddddd;
+  }
+  
+  .styled-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+  }
+  
+  .styled-table tbody tr:last-of-type {
+    border-bottom: 2px solid #009879;
+  }
+  
+  .count-boxes {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin: 20px 0;
+  }
+  
+  .green-count-box,
+  .red-count-box,
+  .dominance-box {
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .green-count-box {
+    background-color: #c8f7c5;
+    border: 2px solid #009879;
+  }
+  
+  .dominance-box {
+    background-color: #f3f3f3;
+    border: 2px solid #333;
+  }
+  
+  .red-count-box {
+    background-color: #f7c8c8;
+    border: 2px solid #870000;
+  }
+  
+  .selectbox {
+    margin-bottom: 16px;
+  }
+  
+  .selectbox select {
+    padding: 8px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    background-color: #f0f0f0;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .selectbox select:hover {
+    background-color: #e0e0e0;
+  }
+  
+  .selectbox select:focus {
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  .input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .input-label {
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .input-box {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  .current-price-box {
+    padding: 10px;
+    background-color: #e7e7e7;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 5px;
+    color: #333;
+  }
+  

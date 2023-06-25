@@ -23,10 +23,13 @@ import FuturesLayout from "../layout/FuturesLayout";
 import Futures from "../pages/Futures/Futures";
 import TotalWalletLayout from "../layout/TotalWalletLayout";
 import TotalWallet from "../pages/TotalWallet/TotalWallet";
-import CoinList from "../pages/CoinList/CoinList";
 import CoinCategory from "../pages/CoinCategory/CoinCategory";
 import CoinPrices from "../pages/CoinPrices/CoinPrices";
 import FuturesGame from "../pages/FuturesGame/FuturesGame";
+import MontlyPriceAnalysisChart from "../pages/CoinList/MontlyPriceAnalysisChart";
+import MovingAveragePages from "../pages/MovingAverage/MovingAveregePages";
+import CoinTracker from "../components/CoinTracker/CoinTracker";
+import CoinAnalysis from "../pages/CoinAnalysis/CoinAnalysis";
 
 
 const Root = () => {
@@ -74,8 +77,20 @@ export const router = createBrowserRouter([
             element: <CoinManagement />,
           },
           {
-            path: "/coin-management/coin-list",
-            element: <CoinList />,
+            path: "/coin-management/monthly-price-analysis-chart",
+            element: <MontlyPriceAnalysisChart />,
+          },
+          {
+            path: "/coin-management/coin-analysis",
+            element: <CoinAnalysis />,
+          },
+          {
+            path: "/coin-management/coin-tracker",
+            element: <CoinTracker />,
+          },
+          {
+            path: "/coin-management/moving-averages",
+            element: <MovingAveragePages />,
           },
           {
             path: "/coin-management/coin-prices",

@@ -11,7 +11,6 @@ import LeftOffCanvas from "../LeftMenu/LeftMenu";
 import UserMenu from "../UserMenu/UserMenu";
 
 const Header = () => {
-  
 
   return (
     <header className="topbar-border mb-4">
@@ -19,13 +18,16 @@ const Header = () => {
         <Container fluid>
           <LeftOffCanvas />
           <Navbar.Brand href="/" className="title">
-           Project
+           Kripto Paneli
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
               <Nav.Link href="/">Help</Nav.Link>
-              <Nav.Link href="/">Newsfeed</Nav.Link>
+              <Nav.Link href="/coin-management/monthly-price-analysis-chart">Aylık Fiyat Analiz Tablosu</Nav.Link>
+              <Nav.Link href="/coin-management/moving-averages">Hareketli Ortalama(MA)</Nav.Link>
+              <Nav.Link href="/coin-management/coin-analysis">Kripto Para Analizi</Nav.Link>
+              <Nav.Link href="/coin-management/coin-tracker">Anlık Kripto Takip</Nav.Link>
             </Nav>
           </Navbar.Collapse>
           <OverlayTrigger

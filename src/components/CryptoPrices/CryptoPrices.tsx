@@ -35,7 +35,7 @@ const CryptoPrices = () => {
    
       <Row>
         <p className="lead">
-          Son <mark>fiyat</mark> bilgileri..
+          Anlık <mark>fiyat</mark> bilgileri..
         </p>
         {coins.map((coin, index) => <PriceBox key={index} symbol={coin}/>)}
       </Row>
