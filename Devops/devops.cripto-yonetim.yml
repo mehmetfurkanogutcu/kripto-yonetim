@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: kriptoyonetim
+  name: coinqoreactwebapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: kriptoyonetim
+      app: coinqoreactwebapp
   template:
     metadata:
       labels:
-        app: kriptoyonetim
+        app: coinqoreactwebapp
     spec:
       containers:
-      - name: kriptoyonetim
-        image: mfoacr.azurecr.io/kriptoyonetim:v1
+      - name: coinqoreactwebapp
+        image: coinqoacr.azurecr.io/coinqoreactwebapp:v1
         resources:
           requests:
             cpu: 1024m
