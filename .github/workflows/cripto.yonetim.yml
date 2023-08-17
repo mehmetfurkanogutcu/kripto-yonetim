@@ -17,5 +17,6 @@ jobs:
         password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
     - name: Build and push Docker images
       run: |
+        RUN yarn install
         RUN yarn build build
-        docker-compose push
+       
