@@ -3,11 +3,9 @@ name: PROD CRIPTO YONETIM - build and deploy
 on: workflow_dispatch
 
 env:
-  AZURE_CONTAINER_REGISTRY: "coinqoacr"
-  CONTAINER_NAME: "coinqoreactwebapp"
-  RESOURCE_GROUP: "coinqo-k8s"
-  CLUSTER_NAME: "coinqo-k8s"
-  DEPLOYMENT_MANIFEST_PATH: "Devops/devops.cripto-yonetim.yml"
+  AZURE_CONTAINER_REGISTRY: "mfotest"
+  CONTAINER_NAME: "kriptoyonetim"
+  RESOURCE_GROUP: "rg-freemf"
 
 jobs:
   buildImage:
@@ -65,13 +63,3 @@ jobs:
           cluster-name: ${{ env.CLUSTER_NAME }}
           admin: 'false'
           use-kubelogin: 'true'
-
-      # Deploys application based on given manifest file
-      - name: Deploys application
-        uses: Azure/k8s-deploy@v4
-        with:
-          action: deploy
-          namespace: frontends-dev
-          manifests: ${{ env.DEPLOYMENT_MANIFEST_PATH }}
-          images: |
-            ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
