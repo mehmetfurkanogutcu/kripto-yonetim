@@ -1,20 +1,30 @@
-name: MFO
+name: Deploy to Azure Web App
 
 on:
   push:
-    branches: [ main ]
+    branches:
+      - main
 
 jobs:
-  build-and-push:
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
+    - name: Checkout
+      uses: actions/checkout@v2
     - name: Login to Azure Container Registry
       uses: azure/docker-login@v1
       with:
-        login-server: ${{ secrets.AZURE_REGISTRY_NAME }}.azurecr.io
+        login-server: mfotest.azurecr.io
         username: ${{ secrets.AZURE_REGISTRY_USERNAME }}
         password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
-    - name: Build and push Docker images
-   
-       
+    - name: Build and push Docker image
+      uses: docker/build-push-action@v2
+      with:
+        context: .
+        push: true
+        tags: mfotest.azurecr.io/kriptoyonetim:latest
+    - name: Deploy to Azure Web App
+      uses: azure/webapps-deploy@v2
+      with:
+        app-name: Kriptopaneli
+        images: mfotest.azurecr.io/kriptoyonetim:latest
