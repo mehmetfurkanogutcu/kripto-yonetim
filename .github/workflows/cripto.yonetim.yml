@@ -1,4 +1,4 @@
-name: Azure Container Registry CI
+name: MFO
 
 on:
   push:
