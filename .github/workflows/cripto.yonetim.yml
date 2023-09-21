@@ -19,6 +19,6 @@ jobs:
       with:
         context: .
         push: true
-        tags: mfotest.azurecr.io/kriptoyonetim:latest
+        tags: mfo01.azurecr.io/kriptoyonetim:latest
 
 #direkt ACR ye deployment gönderimi
