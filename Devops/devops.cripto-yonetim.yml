@@ -85,16 +85,15 @@ metadata:
           'f:observedGeneration': {}
           'f:readyReplicas': {}
           'f:replicas': {}
-          'f:unavailableReplicas': {}
           'f:updatedReplicas': {}
       manager: kube-controller-manager
       operation: Update
       subresource: status
-      time: '2024-02-26T10:07:12Z'
+      time: '2024-02-26T10:10:17Z'
   name: app-kripto
   namespace: frontends-dev
 spec:
-  replicas: 4
+  replicas: 5
   selector:
     matchLabels:
       app: app-kripto
@@ -193,7 +192,7 @@ metadata:
       manager: vpa-recommender
       operation: Update
       subresource: status
-      time: '2024-02-26T10:07:27Z'
+      time: '2024-02-26T10:16:14Z'
   name: app-kripto-hpa-4ith
   namespace: frontends-dev
 spec:
