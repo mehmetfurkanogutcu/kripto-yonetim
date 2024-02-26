@@ -1,24 +1,48 @@
-name: Deploy to Azure Web App
-
-on: workflow_dispatch
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Login to Azure Container Registry
-      uses: azure/docker-login@v1
-      with:
-        login-server: mfo01.azurecr.io
-        username: ${{ secrets.AZURE_REGISTRY_USERNAME }}
-        password: ${{ secrets.AZURE_REGISTRY_PASSWORD }}
-    - name: Build and push Docker image
-      uses: docker/build-push-action@v2
-      with:
-        context: .
-        push: true
-        tags: mfo01.azurecr.io/kriptoyonetim:latest
-
-#direkt ACR ye deployment gönderimi
+---
+apiVersion: "v1"
+kind: "Namespace"
+metadata:
+  name: "frontends-dev"
+---
+apiVersion: "apps/v1"
+kind: "Deployment"
+metadata:
+  name: "app-kripto"
+  namespace: "frontends-dev"
+  labels:
+    app: "app-kripto"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "app-kripto"
+  template:
+    metadata:
+      labels:
+        app: "app-kripto"
+    spec:
+      containers:
+      - name: "kripto-yonetim-sha256-1"
+        image: "gcr.io/evident-cosine-415417/github.com/mehmetfurkanogutcu/kripto-yonetim@sha256:9bd1a6c00768da38b75aacf3c0a4dc5c3ef8d50dcac6cdf3d04ce30f913a1e71"
+---
+apiVersion: "autoscaling/v2"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "app-kripto-hpa-ynr5"
+  namespace: "frontends-dev"
+  labels:
+    app: "app-kripto"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "app-kripto"
+    apiVersion: "apps/v1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+  - type: "Resource"
+    resource:
+      name: "cpu"
+      target:
+        type: "Utilization"
+        averageUtilization: 80
